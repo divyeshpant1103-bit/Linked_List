@@ -1,0 +1,1 @@
+insertatbeginning(l1, 6);
