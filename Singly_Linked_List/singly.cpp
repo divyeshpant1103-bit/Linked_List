@@ -140,6 +140,7 @@ void reverse(struct LL *l1)
     node *prev = nullptr;
     node *curr = l1->head;
     node *next = nullptr;
+    
     while (curr != nullptr)
     {
         next = curr->next; // store the next node
