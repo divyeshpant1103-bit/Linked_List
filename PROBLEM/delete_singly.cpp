@@ -152,30 +152,36 @@ void deleteaaftervalue(struct LL *l1, int value)
     }
     return;
 }
-void deletebeforevalue(struct LL *l1,int value){
-    if (l1->head == nullptr || l1->head->data == value) {
+void deletebeforevalue(struct LL *l1, int value)
+{
+    if (l1->head == nullptr || l1->head->data == value)
+    {
         cout << "No node to delete before the given value" << endl;
         return;
     }
     node *temp = l1->head;
-    while(temp->next!=nullptr &&temp->next->data!=value){
+    while (temp->next != nullptr && temp->next->data != value)
+    {
         temp = temp->next;
     }
-    if(temp->next==nullptr){
+    if (temp->next == nullptr)
+    {
         cout << "Value not found" << endl;
         return;
     }
     node *todelete = temp;
-    if(todelete==l1->head){
+    if (todelete == l1->head)
+    {
         l1->head = l1->head->next;
         delete todelete;
         l1->size--;
         return;
     }
     temp = l1->head;
-    while(temp->next!=todelete){
+    while (temp->next != todelete)
+    {
         temp = temp->next;
-        
+    }
 }
 void display(struct LL *l1)
 {

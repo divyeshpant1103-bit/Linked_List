@@ -83,6 +83,12 @@ void insertbeforevalue(node **head, int val, int beforeval)
         curr->next = temp;
     }
 }
+void deleteatbeginning(node **head){
+    if(*head==NULL){
+        printf("list is empty");
+    }
+    
+}
 void display(node *head)
 {
     node *curr = head;

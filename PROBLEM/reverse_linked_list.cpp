@@ -6,6 +6,7 @@ typedef struct Node
     struct Node *next;
 } node;
 
+
 typedef struct LL
 {
     node *head;
@@ -18,7 +19,7 @@ sl *newll(){
     temp->tail = nullptr;
     return temp;
 }
-
+void display(sl *l1);
 node *newnode(int newdata)
 {
     node *temp = new node;
@@ -44,8 +45,10 @@ void reverse(sl *l1){
         next = curr->next;//store the next node
         curr->next = prev;//linking the current node to the previous node
         prev = curr;//updating the previous node to the current node
-        curr = next;//updating the current node to the next node    
+        curr = next;//updating the current node to the next node   
+      
     }
+  
     l1->head = prev;
 }
 
